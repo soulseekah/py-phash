@@ -24,13 +24,15 @@ Radial hash
 
 ````python
 import pHash
-hash1 = phash_imagehash( 'file.1.jpg' )
-hash2 = phash_imagehash( 'file.2.jpg' )
-print 'Hamming distance: %d (%08x / %08x)' % ( phash_hamming_distance( hash1, hash2 ), hash1, hash2 )
+hash1 = pHash.phash_imagehash( 'file.1.jpg' )
+hash2 = pHash.phash_imagehash( 'file.2.jpg' )
+print 'Hamming distance: %d (%08x / %08x)'
+  % ( pHash.phash_hamming_distance( hash1, hash2 ), hash1, hash2 )
 
-digest1 = phash_image_digest( 'file.1.jpg', 1.0, 1.0, 180 )
-digest2 = phash_image_digest( 'file.2.jpg', 1.0, 1.0, 180 )
-print 'Cross-correelation: %d' % ( phash_crosscorr( digest1, digest2 ) )
+digest1 = pHash.phash_image_digest( 'file.1.jpg', 1.0, 1.0, 180 )
+digest2 = pHash.phash_image_digest( 'file.2.jpg', 1.0, 1.0, 180 )
+print 'Cross-correlation: %d'
+  % ( pHash.phash_crosscorr( digest1, digest2 ) )
 ````
 
 Todo
